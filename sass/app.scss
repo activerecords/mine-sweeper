@@ -1,0 +1,51 @@
+.container {
+  width: auto;
+
+  @media (min-width: 768px) {
+    max-width: none;
+  }
+
+  @media (min-width: 992px) {
+    max-width: none;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: none;
+  }
+}
+
+.game-area {
+  text-align: center;
+
+  .cell {
+    display: inline-block;
+    width: 4vw;
+    height: 4vw;
+    line-height: 4vw;
+    text-align: center;
+    color: blue;
+    background-color: blue;
+    padding: 0;
+    margin: 1px;
+
+    @media (max-width:480px) {
+      width: 8vw;
+      height: 8vw;
+      height: 8vw;
+    }
+
+    &.open {
+      color: black;
+      background-color: #eee;
+
+      &.bomb {
+        color: red;
+        background-color: red;    
+      }
+    }
+  }
+}
+
+.reset-button-area {
+  text-align: center;
+}

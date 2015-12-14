@@ -1,0 +1,48 @@
+/* line 1, ../sass/app.scss */
+.container {
+  width: auto; }
+@media (min-width: 768px) {
+  /* line 1, ../sass/app.scss */
+  .container {
+    max-width: none; } }
+@media (min-width: 992px) {
+  /* line 1, ../sass/app.scss */
+  .container {
+    max-width: none; } }
+@media (min-width: 1200px) {
+  /* line 1, ../sass/app.scss */
+  .container {
+    max-width: none; } }
+
+/* line 17, ../sass/app.scss */
+.game-area {
+  text-align: center; }
+/* line 20, ../sass/app.scss */
+.game-area .cell {
+  display: inline-block;
+  width: 4vw;
+  height: 4vw;
+  line-height: 4vw;
+  text-align: center;
+  color: blue;
+  background-color: blue;
+  padding: 0;
+  margin: 1px; }
+@media (max-width: 480px) {
+  /* line 20, ../sass/app.scss */
+  .game-area .cell {
+    width: 8vw;
+    height: 8vw;
+    height: 8vw; } }
+/* line 37, ../sass/app.scss */
+.game-area .cell.open {
+  color: black;
+  background-color: #eee; }
+/* line 41, ../sass/app.scss */
+.game-area .cell.open.bomb {
+  color: red;
+  background-color: red; }
+
+/* line 49, ../sass/app.scss */
+.reset-button-area {
+  text-align: center; }

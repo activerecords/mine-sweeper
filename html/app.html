@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title>マインスイーパー</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+<!--    <link rel="stylesheet" href="../css/bootstrap-theme.css">-->
+    <link rel="stylesheet" href="../css/app.css">
+  </head>
+  <body ng-controller="AppController as app">
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <a class="navbar-brand">マインスイーパー</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="game-area">
+        <div class="cells" ng-repeat="cells in app.cells">
+          <div class="cell {{cell.state}}" ng-class="{bomb: cell.isBomb}" ng-repeat="cell in cells" ng-click="app.clickCell(cell)">
+            {{cell.num}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="reset-button-area">
+        <button type="button" class="btn btn-primary btn-lg" ng-click="app.init()">リセット</button>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../lib/base/underscore.js"></script>
+    <script type="text/javascript" src="../lib/base/underscore.string.js"></script>
+    <script type="text/javascript" src="../lib/base/fastclick.js"></script>
+    <script type="text/javascript" src="../lib/base/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../lib/base/jquery.transit.min.js"></script>
+    <script type="text/javascript" src="../lib/angular/angular.js"></script>
+    <script type="text/javascript" src="../lib/angular/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="../lib/angular/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="../lib/bootstrap/bootstrap.js"></script>
+    <script type="text/javascript" src="../ts/app/App.js"></script>
+    <script type="text/javascript" src="../ts/app/AppController.js"></script>
+    <script type="text/javascript" src="../ts/app/Awake.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+  </body>
+</html>
