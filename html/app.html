@@ -19,7 +19,7 @@
     <div class="container">
       <div class="game-area">
         <div class="cells" ng-repeat="cells in app.cells">
-          <div class="cell {{cell.state}}" ng-class="{bomb: cell.isBomb}" ng-repeat="cell in cells" ng-click="app.clickCell(cell)">
+          <div class="cell" ng-class="{bomb: cell.isBomb, open: cell.state == 'Open'}" ng-repeat="cell in cells" ng-click="app.clickCell(cell)">
             {{cell.num}}
           </div>
         </div>
